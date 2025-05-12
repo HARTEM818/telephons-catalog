@@ -3,26 +3,15 @@
   margin: 0 auto;
   padding-top: 50px;
 }
-.wrapper {
+.list{
+  display: flex;
+  gap: 30px;
+}
+.list-item{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-#search {
-  padding: 10px;
+  gap: 20px;
+  padding: 30px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-.info-card {
-  width: 100%;
-  padding: 10px 30px 30px 30px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-  h3 {
-    text-align: center;
-  }
 }

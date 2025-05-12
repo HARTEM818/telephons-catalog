@@ -1,3 +1,7 @@
-import { getTechInfo } from "./fetch-tech.js";
+import { fetchInfo } from "./fetchInfo.js";
+import { createCard } from "./createCard.js";
 
-getTechInfo()
+
+fetchInfo()
+createCard()
+
