@@ -1,18 +1,19 @@
 import { fetchInfo } from "./fetchInfo.js";
 
 export async function createCard() {
-  const info = await fetchInfo(); 
-  const product = info.data[0]; 
+  const info = await fetchInfo();
+  const products = info.data;
+  const cards = products.map((elem, index, arr) => {
+    const card = `
+    <li class="list-item">
+                    <img c src="${arr[index].image}" alt="">
+                    <h3>category ${arr[index].category}</h3>
+                    <p>description ${arr[index].description}</p>
+                </li>
+    `;
 
-  const list = document.querySelector(".list");
 
-  const li = document.createElement("li");
-  li.className = "list-item";
-  li.innerHTML = `
-    <img src="${product.image}" alt="">
-    <h3>category: ${product.category}</h3>
-    <p>description: ${product.description}</p>
-  `;
-
-  list.appendChild(li);
+    return card;
+  });
+  return cards
 }
